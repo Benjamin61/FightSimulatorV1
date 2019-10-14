@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace FightsimV1
 {
 	class Fighter
@@ -28,8 +29,13 @@ namespace FightsimV1
 			FighterName.Add(Console.ReadLine());
 			string spelareB = FighterName[1];
 			Console.WriteLine("Namnet på spelare B: " + FighterName[1]);
-			Console.WriteLine(spelareA);
+			
 			Console.ReadKey();
+			Console.Clear();
+			Console.WriteLine(spelareA + " VS " + spelareB);
+			Console.ReadKey();
+			
+			Console.WriteLine("3 2 1 FIGHT!!!!!!");
 		}
 		
 		public void FightLoop()
