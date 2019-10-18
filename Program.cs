@@ -30,15 +30,15 @@ namespace FightsimV1
 				B.Hurt(attackA); //Hurt metoden körs för B där attacken från tidigare förs med i en int
 				Console.WriteLine(Anamn + " Gjorde " + attackA + " Skada"); //Skriver ut hur mycket dmg man gjorde
 				B.GetHp(); //Skriver ut fighters B hp
-				Balive = B.IsAlive();
+				Balive = B.IsAlive(); //Kollar så fighter B är alive
 				Console.ReadKey();
-				int attackB = B.Attack();
+				int attackB = B.Attack(); //Lagrar fighter b attack i en int
 				Console.WriteLine(Bnamn + " Gjorde " + attackB + " Skada");
-				A.Hurt(attackB);
-				A.GetHp();
-				Aalive = A.IsAlive();
+				A.Hurt(attackB); //Kör metoden hur men B attack in skada tagen
+				A.GetHp(); //Skriver ut A:s hp
+				Aalive = A.IsAlive(); //kollar så fighter a är alive
 				Console.ReadKey();
-				Console.Clear();
+				Console.Clear(); //Clearar konsolen
 			}
 
 			if (Aalive == true && Balive == false)
