@@ -11,58 +11,57 @@ namespace FightsimV1
 	{
 		public string name;
 		private int hp;
-		public void SetHp()
+		public int SetHp()
 		{
 			Random generator = new Random();
 			hp = generator.Next(20, 41);
+			return hp;
 		}
 
 
 		//List<string> FighterName = new List<string>();//
-		public void NameDecide()
+		public string NameDecide()
 		{
 			
 			name = Console.ReadLine();
 			Console.WriteLine("Du namngav spelaren: [" + name + "]" );
 
-			//Console.WriteLine("Välj ett namn på spelare A");
-			//FighterName.Add(Console.ReadLine());
-			/*string spelareA = FighterName[0];
-
-			Console.WriteLine("Namnet på spelare A: " + FighterName[0]);
-
-
-			Console.WriteLine("Välj ett namn på spelare B");
-			FighterName.Add(Console.ReadLine());
-			string spelareB = FighterName[1];
-			Console.WriteLine("Namnet på spelare B: " + FighterName[1]);
-
-			Console.ReadKey();
-			Console.Clear();
-			Console.WriteLine(spelareA + " VS " + spelareB);
-			Console.ReadKey();*/
-
-			//Console.WriteLine("3 2 1 FIGHT!!!!!!");//
-
+			
+			return name;
 		}
 
-		public void Attack()
+		public int Attack()
 		{
 			Random generator = new Random();
 			int dmg = generator.Next(2, 7);
+			return dmg;
 
 		}
 
-		public void Hurt(int Dmg)
+		public void Hurt(int dmg)
 		{
-			hp = hp - Dmg;
+			hp = hp - dmg;
+
+			if (hp < 0)
+			{
+				hp = 0;
+			}
 		}
+
+		public int GetHp()
+		{
+
+			Console.WriteLine(name + " har nu " +  hp + "hp.");
+
+			return hp;
+		}
+
 
 		public bool IsAlive()
 		{
 			bool enoughHP = false;
 
-			if (hp > 1)
+			if (hp >= 1)
 			{
 				enoughHP = true;
 			}
