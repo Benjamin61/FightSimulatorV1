@@ -41,16 +41,16 @@ namespace FightsimV1
 				Console.Clear(); //Clearar konsolen
 			}
 
-			if (Aalive == true && Balive == false)
+			if (Aalive == true && Balive == false) //Om Figthers A bool är true dvs den har 1 eller mer hp medans B inte har det så vinner A
 			{
 				Console.WriteLine(Anamn + " vann duellen!");
 
-			}
-			else if (Aalive == false && Balive == true)
+			} 
+			else if (Aalive == false && Balive == true) //Motsatt till ovan. 
 			{
 				Console.WriteLine(Bnamn + " vann duellen!");
 			}
-			else { Console.WriteLine("oavgjort!"); }
+			else { Console.WriteLine("oavgjort!"); } //Annars bli det oavgjort
 
 			Console.ReadKey();
 
